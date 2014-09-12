@@ -1,0 +1,11 @@
+<% @url_a ||= nil %>
+
+<% if !@url_a.is_a?(Array) || @url_a.size == 0 %>
+  <h3>No entries</h3>
+<% else %>
+  <ul>
+    <% @url_a.reverse.each do |url| %>
+      <li><%= link_to url, url %></li>
+    <% end %>
+  </ul>
+<% end %>

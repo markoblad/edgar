@@ -5,3 +5,20 @@ A few useful commands:
 - to clone the repo from github:
 git clone https://github.com/markoblad/edgar.git
 
+- install version of rails for app
+gem install rails -v '3.2.19'
+
+or use rbenv or rvm
+
+- install gems
+bundle install
+
+- start a local development server on http://localhost:3000
+rails server
+
+- start a development console
+rails console
+
+
+
+

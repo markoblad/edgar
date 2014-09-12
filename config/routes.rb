@@ -49,6 +49,8 @@ Edgar::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  root :to => 'edgar_archives#monthly_archive_list'
+  match 'edgar_archives/monthly_archive_list' => 'edgar_archives#monthly_archive_list'
 
   # See how all your routes lay out with "rake routes"
 
