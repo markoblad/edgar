@@ -30,6 +30,15 @@ rake db:create:all
 
 To understand how SEC filing exhibits are classified see Reg SK here: http://www.law.cornell.edu/cfr/text/17/229.601
 
+To get links for accessing edgar data, go to http://www.sec.gov/edgar/searchedgar/ftpusers.htm
+Daily Index (FTP)
+ftp://ftp.sec.gov/edgar/daily-index/
 
+
+Examples of using Edgar FTP to write files locally:
+
+EdgarFtp.get_daily_index_text_file('edgar/daily-index/2013/QTR4', 'sitemap.20131120.xml', opts={})
+
+EdgarFtp.get_daily_index_bin_file('edgar/daily-index/2013/QTR4', 'company.20131120.idx.gz', opts={})
 
 
