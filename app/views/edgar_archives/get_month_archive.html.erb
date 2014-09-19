@@ -12,8 +12,10 @@
     <% @obj_a.reverse.each do |obj| %>
       <tr>
         <% url = obj.is_a?(Hash) ? obj[:url] : obj %>
+        <% parent_url = url.split('/')[0..-2].join('/') %>
         <% name = obj.is_a?(Hash) ? obj[:name] : obj %>
         <td><%= link_to name, (@link_path_sym.blank? ? url : send(@link_path_sym, {url: url, source_url: @source_url})), class: "monthly-archive-list-item", target: @target %></td>
+        <td><%= link_to 'Get All Files Links', parent_url, target: "_blank" %></td>
       </tr>
     <% end %>
   </table>

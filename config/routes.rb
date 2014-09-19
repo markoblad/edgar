@@ -51,7 +51,10 @@ Edgar::Application.routes.draw do
   # root :to => 'welcome#index'
   root :to => 'edgar_archives#monthly_archive_list'
   match 'edgar_archives/monthly_archive_list' => 'edgar_archives#monthly_archive_list'
-
+  match 'edgar_archives/get_month_archive' => 'edgar_archives#get_month_archive'
+  match 'edgar_archives/get_filing_file_list' => 'edgar_archives#get_filing_file_list'
+  match 'edgar_archives/parse_file' => 'edgar_archives#parse_file'
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
