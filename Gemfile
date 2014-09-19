@@ -40,3 +40,5 @@ gem 'rest-client'
 # To use debugger
 # gem 'debugger'
 # gem 'ruby-debug'
+gem 'rails_12factor', group: :production
+ruby '1.9.3'
