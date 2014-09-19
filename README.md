@@ -19,6 +19,17 @@ rails server
 - start a development console
 rails console
 
+- add role to database changing "edgarxbrl" to your application name
+psql postgres;
+CREATE ROLE edgarxbrl;
+ALTER USER edgarxbrl WITH LOGIN SUPERUSER CREATEDB CREATEROLE REPLICATION;
+
+- create the database
+rake db:create:all
+
+
+To understand how SEC filing exhibits are classified see Reg SK here: http://www.law.cornell.edu/cfr/text/17/229.601
+
 
 
 
